@@ -1,0 +1,184 @@
+<svg fill="none" viewBox="0 0 1000 260" width="100%" height="260" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        .container {
+          font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+          height: 260px;
+          border-radius: 20px;
+          background: linear-gradient(135deg, #0b0f19 0%, #111827 50%, #1e1b4b 100%);
+          border: 1px solid rgba(255, 255, 255, 0.12);
+          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          overflow: hidden;
+          box-sizing: border-box;
+          padding: 20px 40px;
+        }
+
+        /* Glowing background electric arcs */
+        .arc-glow-1 {
+          position: absolute;
+          width: 320px;
+          height: 320px;
+          background: radial-gradient(circle, rgba(249, 115, 22, 0.35) 0%, rgba(249, 115, 22, 0) 70%);
+          top: -100px;
+          left: -80px;
+          border-radius: 50%;
+          filter: blur(40px);
+          animation: pulse 6s ease-in-out infinite alternate;
+        }
+
+        .arc-glow-2 {
+          position: absolute;
+          width: 380px;
+          height: 380px;
+          background: radial-gradient(circle, rgba(59, 130, 246, 0.3) 0%, rgba(147, 51, 234, 0) 70%);
+          bottom: -120px;
+          right: -80px;
+          border-radius: 50%;
+          filter: blur(50px);
+          animation: pulse 7s ease-in-out infinite alternate-reverse;
+        }
+
+        .arc-glow-3 {
+          position: absolute;
+          width: 200px;
+          height: 200px;
+          background: radial-gradient(circle, rgba(234, 179, 8, 0.25) 0%, rgba(234, 179, 8, 0) 70%);
+          top: 30px;
+          right: 25%;
+          border-radius: 50%;
+          filter: blur(35px);
+          animation: pulse 4s ease-in-out infinite alternate;
+        }
+
+        /* Animated electric grid lines */
+        .grid-line {
+          position: absolute;
+          height: 1px;
+          width: 100%;
+          background: linear-gradient(90deg, transparent, rgba(255, 107, 0, 0.4), rgba(59, 130, 246, 0.5), transparent);
+          top: 60%;
+          animation: scanline 8s linear infinite;
+        }
+
+        @keyframes pulse {
+          0% { transform: scale(0.9) translate(0, 0); opacity: 0.5; }
+          50% { transform: scale(1.15) translate(20px, 10px); opacity: 0.85; }
+          100% { transform: scale(1.0) translate(-10px, -15px); opacity: 0.6; }
+        }
+
+        @keyframes scanline {
+          0% { transform: translateY(-80px); opacity: 0; }
+          50% { opacity: 0.8; }
+          100% { transform: translateY(120px); opacity: 0; }
+        }
+
+        .badge-pill {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          background: rgba(255, 255, 255, 0.08);
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          border-radius: 20px;
+          padding: 6px 16px;
+          font-size: 11px;
+          font-weight: 600;
+          letter-spacing: 1.5px;
+          text-transform: uppercase;
+          color: #fb923c;
+          margin-bottom: 12px;
+          backdrop-filter: blur(8px);
+          z-index: 2;
+          box-shadow: 0 4px 15px rgba(251, 146, 60, 0.2);
+        }
+
+        .pulse-dot {
+          width: 8px;
+          height: 8px;
+          background-color: #f97316;
+          border-radius: 50%;
+          box-shadow: 0 0 10px #f97316;
+          animation: dot-blink 1.5s infinite;
+        }
+
+        @keyframes dot-blink {
+          0%, 100% { opacity: 1; transform: scale(1); }
+          50% { opacity: 0.3; transform: scale(0.7); }
+        }
+
+        .title {
+          font-size: 42px;
+          font-weight: 900;
+          letter-spacing: -1px;
+          margin: 0;
+          background: linear-gradient(135deg, #ffffff 0%, #fed7aa 40%, #f97316 70%, #60a5fa 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          text-align: center;
+          z-index: 2;
+          text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .subtitle {
+          font-size: 15px;
+          font-weight: 400;
+          color: #94a3b8;
+          margin-top: 10px;
+          text-align: center;
+          max-width: 780px;
+          line-height: 1.5;
+          z-index: 2;
+        }
+
+        .accent-tags {
+          display: flex;
+          gap: 12px;
+          margin-top: 16px;
+          z-index: 2;
+        }
+
+        .tag {
+          font-size: 11px;
+          font-weight: 600;
+          color: #e2e8f0;
+          background: rgba(15, 23, 42, 0.7);
+          border: 1px solid rgba(255, 255, 255, 0.12);
+          border-radius: 8px;
+          padding: 4px 12px;
+          display: flex;
+          align-items: center;
+          gap: 6px;
+        }
+      </style>
+      <div class="container">
+        <div class="arc-glow-1"></div>
+        <div class="arc-glow-2"></div>
+        <div class="arc-glow-3"></div>
+        <div class="grid-line"></div>
+        
+        <div class="badge-pill">
+          <span class="pulse-dot"></span>
+          ROUDAI METALLURGY &amp; ENERGY INTELLIGENCE
+        </div>
+        
+        <h1 class="title">SmartArc: Next-Gen EAF Optimization</h1>
+        
+        <p class="subtitle">
+          AI-Driven Electrical Energy Prediction &amp; Metaheuristic Genetic Algorithm Optimization for Electric Arc Furnace (EAF) Steelmaking Plants
+        </p>
+
+        <div class="accent-tags">
+          <span class="tag">&#9889; Random Forest ML</span>
+          <span class="tag">&#129516; Genetic Algorithm (GA)</span>
+          <span class="tag">&#128142; Mobarakeh Steel Dataset</span>
+          <span class="tag">&#128394; Glassmorphism GUI</span>
+        </div>
+      </div>
+    </div>
+  </foreignObject>
+</svg>
